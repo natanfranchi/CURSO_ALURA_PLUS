@@ -11,7 +11,7 @@
     --botao-azul: #167bf7;
     --cor-de-fundo: #00030c;
     --fonte-principal: 'Inter';
-    --botao-azul-efeito: #9331cc;
+    --botao-azul-efeito: #4494f7;
 }
 
 body {
@@ -158,3 +158,38 @@ body {
     background-color: var(--botao-azul-efeito);
     color: var(--cor-de-fundo);
 }
+
+/*Tratamento pra deixar o site responsivo*/
+@media screen and (max-width: 768px) {   /*Condição para entrar no código, onde for tela e for no máximo 768 pixels*/
+    .container {
+        display: block;
+        background-image: none;
+    }
+    
+    .container__imagem {
+        width: 50vw; /*Transforma a imagem em 50% da tela*/
+    }
+
+    .container__caixa {
+        margin: 2em 2em;
+    }
+
+    .secundario {
+        margin: 0;
+        text-align: center;
+    }
+    
+    .secundario__imagem {
+        width: 50vw;
+    }
+
+    .dispositivos__lista {
+        display: block; /*retira todas as flex box ou grid e deixa um elemento embaixo do outro*/
+    }
+       
+    .rodape__lista {
+        display: block;
+    }
+
+    }
+
