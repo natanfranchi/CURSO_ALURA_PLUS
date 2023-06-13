@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@400;700 & family= Krona+One & family= Montserrat:wght@400;600 & display=swap' );
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167bf7;
+    --cor-de-fundo: #00030c;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #4494f7;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.principal {
+    background-image: url("img/Background.png");  /*a propriedade background color, coloca uma imagem de fundo naquele elemento*/
+    background-repeat: no-repeat; /*se não colocarmos essa funçõa, a imagem colocada no backgroun fica repetindo, uma abaixo da outra*/
+    background-size: contain; /*nesse caso ele vai dimensionar a imagem para o tamanho da classe container, que é a section*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid; /*Com essa propriedade, é possível dividir o conteúdo em linhas e colunas, permitindo o posicionamento flexível dos elementos filhos.*/
+    grid-template-columns: 50% 50%; /*Divide em 2 partes*/
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block; 
+    text-decoration: none;
+    margin-bottom: 1em; /*coloca a margem no botão*/
+}
+
+.botao_secundario {
+    background-color: transparent; /*Deixa sem cor de fundo*/
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color:var(--cinza-secundario);
+}   
+
+.secundario__botao {
+    display: inline-block; /*Transforma o elemento em linha... Deixa o elemento do tamanho dele, não pega a linha toda*/
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*Por padrão, quando criamos a lista ela vem com um * ou um circula em cada item... esse comando tira isso*/
+    margin: 5em 0; /*dessa maneira colocamos a margim de 5em (5x o tamanho da fonte) em cima e embaixo e 0 dos lados*/
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulos {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1em 0;
+}
+
+.lista__item a {
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--branco-principal);
+    text-decoration: none;    
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    color:var(--cinza-secundario);
+    margin: 1em 0;
+    font-size: 14px;
+}
+
+.lista__item a:hover {     /*ação ao passar o mouse sobre o item*/
+    color: var(--botao-azul);
+}
+
+.lista__item a:active {    /*ação enquanto o mouse estiver clicando no item*/
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
